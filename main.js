@@ -1,8 +1,8 @@
-var dqs = document.querySelector;
+
 var btn = document.querySelectorAll('button');
 var gameEl = ['paper','scissors','rock'];
-var user = dqs('#hpPlayer span');
-var com = dqs('#hpCpu span');
+var user = document.querySelector('#hpPlayer span');
+var com = document.querySelector('#hpCpu span');
 var userScore = 100;
 var CPUScore = 100;
 var locked = false;
@@ -40,7 +40,7 @@ function game(){
    var CPU = gameEl[Math.floor(Math.random()*3)];
    var styleCpu= document.querySelector('#computer .'+CPU);
    var score = document.querySelector('#score');
- var el = document.querySelectorAll('.element');   
+    var el = document.querySelectorAll('.element');   
    for(var i=0; i<el.length; i++){
    el[i].style.opacity=0;}
     
