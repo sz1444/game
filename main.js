@@ -6,7 +6,7 @@ var com = document.querySelector('#hpCpu span');
 var userScore = 100;
 var CPUScore = 100;
 var locked = false;
-var restart = documen.querySelector('#reset');
+var restart = document.querySelector('#reset');
 
 
 
