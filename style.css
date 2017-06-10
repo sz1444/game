@@ -1,0 +1,143 @@
+body{
+   text-align: center;
+   margin: 0 auto;
+   background-color: #eee;
+}
+
+h1{
+   padding: 0;
+   font-size: 20px;
+   margin: 0;
+   color:#777;
+}
+
+button{
+   font-size: 50px;
+   margin: 50px; 
+   border:0;
+  background-color: #eee;
+   color:#2e2e2e;
+
+}
+
+button:hover{
+   text-shadow: 0 0 15px #5199e2;
+   cursor:pointer;
+}
+#score{
+   width: 500px;
+   height: 50px;
+   margin: 20px auto;
+   background-color: #fff;
+   border-radius: 5px;
+   border: 1px solid #ddd;
+   font-size: 40px;
+   font-weight: bold;
+   color:#5a5a5a;
+}
+
+#screen{
+  position: relative;
+   margin:0 auto;
+   width: 800px;
+   height:300px;
+   background-color: #fff;
+   border:1px solid #ddd;
+   font-size: 20px;
+   font-weight: bold;
+   color:#444;
+   box-shadow:0px 
+}
+
+#player{
+   position: relative;
+   width: 49%;
+   display: inline-block;
+}
+
+#computer{
+   position: relative;
+   width: 49%;
+   display: inline-block;
+}
+
+#player .element{
+   transform: rotateY(180deg);
+
+}
+
+#screen .element{
+   position: absolute;
+   background-color: #fff;
+   font-size: 120px;
+  width: 400px;
+  height: 100px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin: 90px 0 0 -200px;
+   text-shadow: 0px 0px 5px #000;
+}
+
+.paper, .rock, .scissors{
+ opacity: 0;
+}
+
+.element{
+   transition-duration: 1s;
+}
+
+#hpCpu{
+   position: absolute;
+   top:20px;
+   right:20px;
+   width: 200px;
+   background-color: #fff;
+   border:1px solid #ccc;
+  
+}
+
+#hpCpu span{
+   padding: 5px 0;
+   width: 100%;
+   position: relative;
+   display: block;
+   background-color: #ff0e0e;
+}
+#hpCpu:before{
+   content: "CPU";
+   background-color: #ddd;
+   width: 100%;
+   display: block;
+   padding: 20px 0 ;
+}
+
+#hpPlayer{
+   position: absolute;
+   
+   top:20px;
+   left:20px;
+   width: 200px;
+   background-color: #fff;
+   border:1px solid #ccc;
+}
+#hpPlayer:before{
+   content: "Player";
+   background-color: #ddd;
+   width: 100%;
+   display: block;
+   padding: 20px 0 ;
+}
+
+#hpPlayer span{
+   padding: 5px 0;
+   width: 100%;
+   position: relative;
+   display: block;
+   background-color: #ff0e0e;
+}
+
+#reset{
+   display: block;
+   margin: 0 auto;
+}
