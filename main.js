@@ -1,9 +1,9 @@
 var btn = document.querySelectorAll('button');
 var gameEl = ['paper','scissors','rock'];
-var user=document.querySelector('#hpPlayer span');
-var com=document.querySelector('#hpCpu span');
-var userScore =100;
-var CPUScore =100;
+var user = document.querySelector('#hpPlayer span');
+var com = document.querySelector('#hpCpu span');
+var userScore = 100;
+var CPUScore = 100;
 var locked = false;
 var restart = document.querySelector('#reset');
 
@@ -35,12 +35,12 @@ for(i=0;i<btn.length;i++){
 restart.addEventListener('click', reset);
 
 function game(){
-   if(locked==false){
+   if (locked===false){
    var CPU = gameEl[Math.floor(Math.random()*3)];
    var styleCpu= document.querySelector('#computer .'+CPU);
    var score = document.querySelector('#score');
  var el = document.querySelectorAll('.element');   
-   for(i=0;i<el.length; i++){
+   for(var i=0; i<el.length; i++){
    el[i].style.opacity=0;}
     
 
@@ -58,11 +58,11 @@ function game(){
      styleCpu.style.opacity=1;
   }
    
-   if(score.innerHTML=="CPU Wins"){
+   if(score.innerHTML==='CPU Wins'){
       userScore-=10;
       user.style.width=userScore+'%';
       user.innerHTML=userScore+"%";
-   }else if(score.innerHTML=="User Wins"){
+   }else if(score.innerHTML==='User Wins'){
       CPUScore-=10;
       com.style.width=CPUScore+'%';
       com.innerHTML=CPUScore+"%";
@@ -73,15 +73,15 @@ function game(){
 
 
 function winner(){
-    if(userScore ==0){
-       score.innerHTML='Lost';
-       score.style.color='red';
+    if(userScore === 0){
+       score.innerHTML = 'Lost';
+       score.style.color = 'red';
        locked=true;
        
-   }else if(CPUScore ==0){
-       score.innerHTML='Victory';
-      score.style.color='green';
-      locked=true;
+   }else if(CPUScore === 0){
+       score.innerHTML = 'Victory';
+      score.style.color = 'green';
+      locked = true;
    }
 }
 
