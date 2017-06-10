@@ -1,11 +1,12 @@
+var dqs = document.querySelector;
 var btn = document.querySelectorAll('button');
 var gameEl = ['paper','scissors','rock'];
-var user = document.querySelector('#hpPlayer span');
-var com = document.querySelector('#hpCpu span');
+var user = dqs('#hpPlayer span');
+var com = dqs('#hpCpu span');
 var userScore = 100;
 var CPUScore = 100;
 var locked = false;
-var restart = document.querySelector('#reset');
+var restart = dqs('#reset');
 
 
 
