@@ -44,18 +44,10 @@ function game(){
    el[i].style.opacity=0;}
     
 
-  if(this.id=='paper'){
-     score.innerHTML=result.paper[CPU];
-     document.querySelector('#player .paper').style.opacity=1;
+if(this.id==='paper'|| this.id==='rock' || this.id==='scissors'){
+     score.innerHTML=result[this.id][CPU];
+     document.querySelector('#player .'+this.id).style.opacity=1;
     styleCpu.style.opacity=1;
-  }else if(this.id=='rock'){
-     score.innerHTML=result.rock[CPU];
-       document.querySelector('#player .rock').style.opacity=1;
-     styleCpu.style.opacity=1;
-  }else if(this.id=='scissors'){
-    score.innerHTML=result.scissors[CPU];
-       document.querySelector('#player .scissors').style.opacity=1;
-     styleCpu.style.opacity=1;
   }
    
    if(score.innerHTML==='CPU Wins'){
